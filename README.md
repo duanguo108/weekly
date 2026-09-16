@@ -1,743 +1,202 @@
-# 科技爱好者周刊
+# 科技爱好者周刊 · 工具清单
 
-记录每周值得分享的科技内容，周五发布。
+本项目基于 [阮一峰](https://github.com/ruanyf) 的 [科技爱好者周刊](https://github.com/ruanyf/weekly)，从每期文章的「工具 / 软件」章节中自动提取工具条目，整理为可检索的工具清单文档。
 
-欢迎投稿文章/软件/资源，请[提交 issue](https://github.com/ruanyf/weekly/issues) 。
+原始周刊记录每周值得分享的科技内容，每期都会推荐若干实用工具。本仓库在保留原文的基础上，通过脚本将这些工具汇总、去重，并按每 50 期拆分为多个 Markdown 文件，方便查阅与检索。
 
-> P.S. 讨论区的[《谁在招人》](https://github.com/ruanyf/weekly/issues/11434)，是一个免费的程序员招聘帖，提供大量就业信息，欢迎发布工作/实习岗位。
+## 数据来源
 
-## 2026
+- 原文仓库：[ruanyf/weekly](https://github.com/ruanyf/weekly)
+- 文章目录：`docs/issue-*.md`（第 1 期 ~ 第 412 期）
+- 提取章节：`## 工具`、`## 软件`
 
-**九月**
+## 工具提取脚本
 
-- 第 412 期：[禁止 issue，只用 PR](docs/issue-412.md)
-- 第 411 期：[OpenClaw 2.0 是一个缩影](docs/issue-411.md)
+脚本位于 `tool-extractor/extract_tools.py`，支持增量解析：只处理尚未提取的新期文章，清单文档仅追加、不修改历史条目。
 
-**八月**
+```bash
+# 增量更新（处理新发布的期数）
+python tool-extractor/extract_tools.py
 
-- 第 410 期：[你需要知道的 AI 三种机制](docs/issue-410.md)
-- 第 409 期：[程序员的职业未来](docs/issue-409.md)
-- 第 408 期：[你需要知道的 AI 缓存知识](docs/issue-408.md)
-- 第 407 期：[国家为什么需要开源软件？](docs/issue-407.md)
+# 全量重建（清空后重新生成所有清单）
+python tool-extractor/extract_tools.py --reset
 
-**七月**
+# 自定义拆分粒度（默认每 50 期一个文件）
+python tool-extractor/extract_tools.py --reset --chunk-size 50
+```
 
-- 第 406 期：[道可，道非，常道](docs/issue-406.md)
-- 第 405 期：[资源，社会公平与算力](docs/issue-405.md)
-- 第 404 期：[你需要知道的 AI 内存知识](docs/issue-404.md)
-- 第 403 期：[为什么 Dropbox 不成功](docs/issue-403.md)
-- 第 402 期：[我在智念 AI 的日子（小说）](docs/issue-402.md)
+输出目录：`tool-extractor/output/`  
+状态文件：`tool-extractor/state.json`（记录已处理文章与已知 URL，用于增量与去重）
 
-**六月**
+## 工具清单文档
 
-- 第 401 期：[如何赚到10亿美元](docs/issue-401.md)
-- 第 400 期：[rsync 的争论](docs/issue-400.md)
-- 第 399 期：[中国 AI 大厂访问记](docs/issue-399.md)
+共 **4061** 条不重复工具，拆分为 **9** 个文件（每 50 期一段）。以下列出每个文档中的前 10 个工具及简要描述，完整内容请点击文件名查看。
 
-**五月**
+### [tools-list-001-050.md](tool-extractor/output/tools-list-001-050.md)（第 1–50 期）
 
-- 第 398 期：[Token 费用难以负担](docs/issue-398.md)
-- 第 397 期：[财富正在向 AI 集中](docs/issue-397.md)
-- 第 396 期：[互联网通信的替代方案](docs/issue-396.md)
-- 第 395 期：[软件开发的第三种方式](docs/issue-395.md)
+1. **Spectrum**：开源的社区软件，形式非常新颖美观。
+2. **jsonstore.io**：通过 HTTP Header 读写 JSON 数据的免费 datastore。
+3. **flamebearer**：Node 应用的火焰图生成工具，用于性能分析。
+4. **DNS Performance Test**：DNS 响应时间的命令行比较脚本。
+5. **merge-images**：多张图片合成一张图片的浏览器 JS 库，使用了 Canvas。
+6. **Tabler**：一个基于 Bootstrap4 的面板（dashboard）组件库。
+7. **Etherpad**：老牌的多人实时编辑协同工具。
+8. **Mustard UI**：一个简洁、好看的 CSS 框架，压缩后只有5.28KB。
+9. **ReactOS**：ReactOS 是一个开源的操作系统，目标是兼容 Windows，能够运行 Windows 的应用程序和驱动程序。它只能安装在 FAT16 或者 FAT32 的…
+10. **Remote Browser**：一个浏览器自动化框架，可以用脚本控制已经打开的浏览器。
 
-**四月**
+…
 
-- 第 394 期：[第二次 API 开放浪潮](docs/issue-394.md)
-- 第 393 期：[脑腐状态](docs/issue-393.md)
-- 第 392 期：[axios 投毒与好莱坞式骗术](docs/issue-392.md)
-- 第 391 期：[AI 的贫富分化](docs/issue-391.md)
+---
 
-**三月**
+### [tools-list-051-100.md](tool-extractor/output/tools-list-051-100.md)（第 51–100 期）
 
-- 第 390 期：[没有语料，大模型就是智障](docs/issue-390.md)
-- 第 389 期：[未来如何招聘程序员](docs/issue-389.md)
-- 第 388 期：[测试是新的护城河](docs/issue-388.md)
-- 第 387 期：[你是领先的](docs/issue-387.md)
+1. **node-five**：一个基于 QT 的 Nodejs 框架，用于开发 Node 应用的图形界面。
+2. **Learn anything**：一个学习资源的搜索引擎，可以搜索各种主题，返回相应的教程。
+3. **Gckit-CLI**：命令行下使用一行命令，生成`Swift`、`Objective-C`等项目的模板代码。
+4. **php-lisp**：一个使用 PHP 写的 Lisp 代码解释器。
+5. **Paste to Markdown**：粘贴到该窗口的任何文本内容，都会自动转为 Markdown 格式。
+6. **RCT**：一个通过解析 rdb 文件对 redis 内存结构分析的一站式平台。
+7. **squoosh**：谷歌开源的图像压缩服务。
+8. **Whoer.net**：查看你的 HTTP 请求携带多少个人信息的网站。
+9. **chunkwm**：Mac 电脑的多窗口平铺式管理器。
+10. **StreamSaver.js**：流媒体保存成本地文件的浏览器库。
 
-**二月**
+…
 
-- 第 386 期：[当外卖员接入 AI](docs/issue-386.md)
-- 第 385 期：[马斯克害怕中国车企吗？](docs/issue-385.md)
-- 第 384 期：[为什么软件股下跌](docs/issue-384.md)
+---
 
-**一月**
+### [tools-list-101-150.md](tool-extractor/output/tools-list-101-150.md)（第 101–150 期）
 
-- 第 383 期：[你是第几级 AI 编程](docs/issue-383.md)
-- 第 382 期：[独立软件的黄昏](docs/issue-382.md)
-- 第 381 期：[中国 AI 大模型领导者在想什么](docs/issue-381.md)
-- 第 380 期：[为什么人们拥抱“不对称收益”](docs/issue-380.md)
+1. **GoMailer**：一个轻量的电子邮件推送开源工具，可以与网站的用户反馈、留言等功能进行集成，将数据填入模板，投递到指定的邮箱。
+2. **Zarm**：一个 React 组件库，众安科技出品。特点是依赖少体积小（压缩后 60KB），扩展性好，样式命名采用了 BEM 规范。
+3. **KafkaCenter**：一站式的 Kafka 集群管理和维护平台，代码开源，完善的权限设计，使用方便，无需精通 Kafka 就能管理集群。
+4. **XAudioPro**：在线音频实时剪辑转码网站。我个人本身是做音频开发出生的，对音频算法底层很熟悉，所以就诞生了创建这个网站的想法。 专业的 Audition 软件主要面对很多专业人…
+5. **办公室噪音生成器**：在家远程办公的时候，你会不会想起办公室嘈杂的工作环境，说话声、电话铃声、敲击键盘声、喝水声…… 这里有一个办公室噪音生成器，可以无限播放。
+6. **HugeGraph**：百度安全团队研发的一款易用、高效、通用的开源图数据库系统， 具备完善的工具链组件，助力用户轻松构建基于图数据库之上的应用和产品。 典型应用场景包括深度关系探索、…
+7. **SimpleCTO  screenshot**：一个在线生成网站截图的工具，用户提交 URL，就能下载网页截图，代码开源。
+8. **Swift Playgrounds**：苹果公司官方的免费 Mac 桌面软件，通过游戏学习 Swift 语言。
+9. **time.gov**：美国政府显示国内各时区的时间的网站。
+10. **progressive-image-element**：一个 HTML 的自定义元素（custom element），可以懒加载网页图片。这个元素的代码非常简单，可以作为学习自定义元素的写法范例。
 
-## 2025
+…
 
-**十二月**
+---
 
-- 第 379 期：[《硅谷钢铁侠》摘录](docs/issue-379.md)
-- 第 378 期：[预测是新的互联网热点](docs/issue-378.md)
-- 第 377 期：[14万美元的贫困线](docs/issue-377.md)
-- 第 376 期：[太空数据中心的争议](docs/issue-376.md)
+### [tools-list-151-200.md](tool-extractor/output/tools-list-151-200.md)（第 151–200 期）
 
-**十一月**
+1. **Gotify**：一个 Go 语言写的 WebSockets 库，有服务端、客户端和安卓端。
+2. **lint-md**：一个检查中文 Markdown 语法风格的命令行工具，比如英文字母与全角字符之间有一个空格。
+3. **FairEmail**：开源的安卓电子邮件客户端，强调安全和隐私保护。
+4. **AR-lab**：一个实验性桌面程序，使用百度飞轮和 Electron 实现的 AR 剪贴和复制。手机先对准某人，再对准电脑屏幕，即可把他/她复制粘贴到桌面程序里面！
+5. **rss_everyday**：一个 GitHub Actions 模板，每天定时运行，将 RSS 内容推送到 Telegram 频道。
+6. **mdBook**：GitBook 的 Rust 语言移植，可以将 markdown 源文件转成一个在线阅读网站。
+7. **flowchart-fun**：可能是最简单的流程图制作工具。左边的文本框输入，一行就代表一个新节点，缩进代表隶属关系，右边自动生成图形。
+8. **DarkModeBuddy**：一个 macOS 应用，自动根据外部光线的强弱，调整桌面为亮模式或暗模式。
+9. **Arrow**：一个 Python 的日期时间库，借鉴了 moment.js 的 API 设计。
+10. **Wombo**：一个手机 App，上传一张脸部照片和一首歌曲，它就会自动生成照片人物对口型唱歌的视频。
 
-- 第 375 期：[一扇门的 Bug](docs/issue-375.md)
-- 第 374 期：[6GHz 的问题](docs/issue-374.md)
-- 第 373 期：[数据模型是新产品的核心](docs/issue-373.md)
-- 第 372 期：[软件界面如何设计](docs/issue-372.md)
+…
 
-**十月**
+---
 
-- 第 371 期：[一个乐观主义者的专访](docs/issue-371.md)
-- 第 370 期：[正确的代码高亮](docs/issue-370.md)
-- 第 369 期：[Tim 与罗永浩的对谈](docs/issue-369.md)
-- 第 368 期：[不要这样管理软件团队](docs/issue-368.md)
+### [tools-list-201-250.md](tool-extractor/output/tools-list-201-250.md)（第 201–250 期）
 
-**九月**
+1. **PeaZip**：一个开源的桌面压缩软件，带有图形界面，优点是支持一些新的压缩算法，包括 Zstandard 和 Brotli 算法。
+2. **Speech To Code**：一个实验性的语音编程项目，通过口述指令生成代码，这里试用 [Demo](https://pedrooaugusto.github.io/speech-to-co…
+3. **HertzBeat 赫兹跳动**：一个国产的开源云监控系统，具有监控网站、PING 连通性、端口可用性、数据库、操作系统、阈值告警等功能，告警通知可通过邮件、微信、钉钉、飞书等发送。
+4. **stop-mess-around**：一个浏览器插件，减少摸鱼的时间和频率。打开插件后，一旦访问指定的消磨时间的网址，它就会自动统计浏览时间，达到门槛值就会弹出提醒。
+5. **视频 PPT 提取器**：某些教学视频都在讲解 PPT 文案，或者需要导出 PPT 供以后学习，这个工具可以从视频里面提取 PPT，保存为 PDF 文件。
+6. **sqlite-utils**：一个命令行工具，可以直接对 SQLite 数据库执行 SQL 查询。
+7. **Simple.css**：一个极简化的 CSS 框架，追求“无类化使用”，即不用指定 class，直接对 HTML 标签生效。 类似的框架还有很多，比如 [Pico.css](https…
+8. **Sci Hub Injector**：一个浏览器插件，可以在国外著名的论文网站上（比如 PubMed、Nature 等等），插入某篇论文对应的 SciHub 链接。它的代码很简单，可以用来学习如何写…
+9. **fq**：一个命令行工具，可以方便地查看二进制文件的内容。
+10. **lemmy**：一个开源的论坛聚合服务，只要是支持 Fediverse 协议的论坛，都可以用它订阅。然后就可以在一个页面上，同时浏览多个论坛并发帖。
 
-- 第 367 期：[Nano Banana 的几个妙用](docs/issue-367.md)
-- 第 366 期：[旧金山疯狂的 AI 广告](docs/issue-366.md)
-- 第 365 期：[流量变现正在崩塌](docs/issue-365.md)
-- 第 364 期：[最难还原的魔方](docs/issue-364.md)
+…
 
-**八月**
+---
 
-- 第 363 期：[最好懂的神经网络解释](docs/issue-363.md)
-- 第 362 期：[GitHub 工程师谈系统设计](docs/issue-362.md)
-- 第 361 期：[暗网 Tor 安全吗](docs/issue-361.md)
-- 第 360 期：[Dan Wang 的新书](docs/issue-360.md)
-- 第 359 期：[Palantir 值得关注](docs/issue-359.md)
+### [tools-list-251-300.md](tool-extractor/output/tools-list-251-300.md)（第 251–300 期）
 
-**七月**
+1. **nango**：一个[开源](https://github.com/NangoHQ/nango)的 Web 服务，自动获取和管理各种 OAuth 认证的 token，可以自己架…
+2. **docker-rollout**：这个工具可以不停机更新 Docker Compose 里面的某个服务。原理是同时新建两个实例，用已更新的实例替换未更新的实例。
+3. **Web LLM**：这个软件通过 WebGPU API，在浏览器里面运行 LLM 模型，可以离线运行，并且不限定模型。 当然，它不能用来训练大模型，而且表现肯定不如 ChatGPT…
+4. **OpenAI 接口应用**：使用 Express 搭建的 Node.js 应用，用来连接 OpenAI API 进行聊天。代码开源。这是前端代码，另有[后端代码](https://gith…
+5. **Animated Drawings**：这个工具使用 AI 模型，将手绘的人物草图变成一段动画。
+6. **scrutiny**：实时检查硬盘 S.M.A.R.T 健康状态的工具，Docker 安装，自带 Web UI。
+7. **browsertunnel**：这个软件可以将用户信息，通过网页的 DNS 请求传回服务器。注意，不是 HTTP 请求，而是使用查询域名的 DNS 请求夹带额外信息。这种监视用户的方法，很难发…
+8. **Upbase**：一个网页应用，将项目管理、日程安排、聊天、文档等功能做到了一起，目标是成为团队协作的一站式工具。
+9. **Bot Aquarium**：一个 Linux 系统运行的虚拟机，特点是完全交给 OpenAI 控制。 你描述想用虚拟机完成的任务，它把这段描述传给 OpenAI，并且自动执行返回的命令。等…
+10. **Autodoc**：使用 LLM 模型自动生成代码文档。作者的想法是将它加入持续构建，每次代码变更，就会同时自动更新文档。
 
-- 第 358 期：[如何拯救一家濒临倒闭的创业公司](docs/issue-358.md)
-- 第 357 期：[稳定币的博弈](docs/issue-357.md)
-- 第 356 期：[公司强推 AI 编程，我该怎么办](docs/issue-356.md)
-- 第 355 期：[两本《芯片战争》](docs/issue-355.md)
+…
 
-**六月**
+---
 
-- 第 354 期：[8000mAh 手机电池，说明了什么？](docs/issue-354.md)
-- 第 353 期：[苹果的“液态玻璃”是为了 AR](docs/issue-353.md)
-- 第 352 期：[Bug 追踪系统的正确样子](docs/issue-352.md)
-- 第 351 期：[GitHub Issues（几乎）是最好的笔记应用](docs/issue-351.md)
+### [tools-list-301-350.md](tool-extractor/output/tools-list-301-350.md)（第 301–350 期）
 
-**五月**
+1. **SunEditor**：一个开源的“所见即所得”编辑器，兼容性比较好。
+2. **TrasHTTPandas**：这个网站提供各种状态码的 HTTP 回应，供 API 调用，可以用来调试前端请求。
+3. **安读**：一款使用 Flutter 编写的桌面读书软件，支持 WebDAV 同步。
+4. **VSpace**：一个浏览器插件，提供侧边栏的垂直书签和标签页管理器。
+5. **FreeReNamer**：开源的跨平台桌面软件，用来将文件批量重命名。
+6. **Keyviz**：开源的 Windows 软件，在桌面上显示用户实时的按键。
+7. **XIAOJUSURVEY**：一套开源的问卷系统，自带后端和前端，用于架设管理自己的问卷。
+8. **Quetta**：一个注意保护个人隐私的手机浏览器，支持 iOS 和安卓，不收集用户的任何数据，也防止被网站收集。
+9. **Sandstorm**：一个开源的 Web 应用软件商店，安装以后，就可以在它的商店里面，点击安装/运行多种 Web 应用。
+10. **Database Diagram**：一个免费网站，在线生成数据库的 ER（实体-关系）图。
 
-- 第 350 期：[Java 三十周年](docs/issue-350.md)
-- 第 349 期：[神经网络算法的发明者](docs/issue-349.md)
-- 第 348 期：[李飞飞，从移民到 AI 明星](docs/issue-348.md)
-- 第 347 期：[冷启动的破解之道](docs/issue-347.md)
+…
 
-**四月**
+---
 
-- 第 346 期：[未来就是永恒感的丧失](docs/issue-346.md)
-- 第 345 期：[HDMI 2.2 影音可能到头了](docs/issue-345.md)
-- 第 344 期：[制造业正在“零工化”](docs/issue-344.md)
+### [tools-list-351-400.md](tool-extractor/output/tools-list-351-400.md)（第 351–400 期）
 
-**三月**
+1. **Quarkdown**：一个使用 Markdown 语法的排版系统。
+2. **RsyncUI**：一个开源的 Mac 应用，提供 rsync 的图形界面，用于跟远程服务器传输文件。
+3. **Donut**：一个浏览器的编排器，可以保存各种不同的浏览器配置，根据需要快速启动。
+4. **Read Frog**：（陪读蛙） 一个浏览器插件，可以翻译页面，提取文章主要内容，给出单词和句子和详细解释，[代码开源](https://github.com/mengxi-ream…
+5. **Datetime.app**：开源的日期时间网站，time.is 的替代品。
+6. **naviix**：网页的键盘导航库，通过上下左右的方向键，选取网页的焦点元素。
+7. **go-v2ex**：基于 Go 语言的命令行版 V2EX 客户端。
+8. **TL-RTC-APP**：开源的 Web 即时通信系统，基于 webrtc。
+9. **Cap.js**：一个网页上的机器人识别工具，用作 CAPTCHA 方案，采用 SHA-256 工作量证明算法。
+10. **Quartz**：Markdown 文档的静态站点发布器，适合用作收费服务 Obsidian Publish 的替代品。
 
-- 第 343 期：[如何阻止 AI 爬虫](docs/issue-343.md)
-- 第 342 期：[面试的 AI 作弊——用数字人去面试](docs/issue-342.md)
-- 第 341 期：[低代码编程，恐怕不会成功](docs/issue-341.md)
-- 第 340 期：[技术炒作三十年](docs/issue-340.md)
+…
 
-**二月**
+---
 
-- 第 339 期：[代币是什么](docs/issue-339.md)
-- 第 338 期：[重新思考 6G](docs/issue-338.md)
-- 第 337 期：[互联网创业几乎没了](docs/issue-337.md)
-- 第 336 期：[面对 AI，互联网正在衰落](docs/issue-336.md)
+### [tools-list-401-450.md](tool-extractor/output/tools-list-401-450.md)（第 401–412 期）
 
-**一月**
+1. **Lore**：游戏公司 EpicGames 开源的一个版本管理系统。跟 Git 相比，它的最大特点是为二进制文件提供版本管理。 它将大型的二进制文件拆分成一个个数据块，进行储…
+2. **DNS Pick**：一个命令行的 DNS 优选工具，结合平均延迟与解析成功率，选出兼顾速度与稳定性的最优 DNS 服务器。
+3. **GitFolio**：轻量级的 Git 仓库管理系统，类似于 Gitea，支持从 GitHub 镜像同步仓库数据。
+4. **ssh-at**：`~/.ssh/config` 的图形化管理工具。
+5. **LockIME**：macOS 的输入法锁定工具，可以指定不同应用的默认输入法。
+6. **封面生成器**：（Cover Maker） 封面制作的网页工具。
+7. **PowerLens**：Oh-My-Zsh 插件，在命令行提示符实时展示电源功率、电池、CPU、CPU 温度、风扇转速、内存和网络流量。
+8. **MyKVM**：源跨平台软件 KVM，在同一局域网内，让 macOS、Windows、Linux 共享一套键盘、鼠标和剪贴板。
+9. **ai_caption_video**：开源的 Windows 应用，生成大字报式的中文短视频，支持关键词高亮、字幕动效、本地 TTS 配音和语音克隆。
+10. **AnyDrag**：一款 macOS 小工具，不必按住标题栏，就能拖动、缩放、最大化、平铺窗口。
 
-- 第 335 期：[年底的未来已来](docs/issue-335.md)
-- 第 334 期：[年终笔记四则](docs/issue-334.md)
-- 第 333 期：[一切都要支付两次](docs/issue-333.md)
-- 第 332 期：[西蒙·威利森的年终总结，梁文锋的访谈](docs/issue-332.md)
+…
 
-## 2024
+---
 
-**十二月**
+## 条目格式说明
 
-- 第 331 期：[你可能是一个 NPC](docs/issue-331.md)
-- 第 330 期：[李开复梳理人工智能](docs/issue-330.md)
-- 第 329 期：[示意图利器 D2](docs/issue-329.md)
-- 第 328 期：[AI 模型不是一门好生意](docs/issue-328.md)
+每条工具记录包含：
 
-**十一月**
+- 工具名称与所属期数
+- 原文链接（`docs/issue-xxx.md`）
+- 工具 URL
+- 简要描述（摘自周刊原文）
 
-- 第 327 期：[没有链接的互联网](docs/issue-327.md)
-- 第 326 期：[世界没有那么多财富](docs/issue-326.md)
-- 第 325 期：[VS Code 编辑器的下一站是 Zed？](docs/issue-325.md)
-- 第 324 期：[人类已知的最大质数](docs/issue-324.md)
-- 第 323 期：[技术公司的口号比拼](docs/issue-323.md)
+同一 URL 在全库中只保留一条（以首次出现的期数为准）。
 
-**十月**
+## 许可与致谢
 
-- 第 322 期：[内容行业的内幕](docs/issue-322.md)
-- 第 321 期：[傅盛回忆录](docs/issue-321.md)
-- 第 320 期：[乒乓仓](docs/issue-320.md)
-
-**九月**
-
-- 第 319 期：[如何拍出爆款视频](docs/issue-319.md)
-- 第 318 期：[创业咖啡馆的记忆](docs/issue-318.md)
-- 第 317 期：[驴子，老虎和狮子的寓言](docs/issue-317.md)
-- 第 316 期：[你一生的故事](docs/issue-316.md)
-
-**八月**
-
-- 第 315 期：[一份谷歌离职报告](docs/issue-315.md)
-- 第 314 期：[《黑神话：悟空》可以产业化吗？](docs/issue-314.md)
-- 第 313 期：[如果新加坡没有空调](docs/issue-313.md)
-- 第 312 期：[从英特尔看“美国制造”](docs/issue-312.md)
-- 第 311 期：[低利率与长期项目](docs/issue-311.md)
-
-**七月**
-
-- 第 310 期：[内容农场的 AI 赚钱术](docs/issue-310.md)
-- 第 309 期：[无人驾驶出租车的双面刃](docs/issue-309.md)
-- 第 308 期：[工作找不到，博士能读吗？](docs/issue-308.md)
-- 第 307 期：[不要看重 Product Hunt](docs/issue-307.md)
-
-**六月**
-
-- 第 306 期：[信息就像糖一样上瘾](docs/issue-306.md)
-- 第 305 期：[随机数，这是一个问题](docs/issue-305.md)
-- 第 304 期：[最受欢迎的颜色](docs/issue-304.md)
-- 第 303 期：[技术封建主义](docs/issue-303.md)
-
-**五月**
-
-- 第 302 期：[创业虽然好，不敢推荐了](docs/issue-302.md)
-- 第 301 期：[OpenAI 的图书馆工位](docs/issue-301.md)
-- 第 300 期：[三十年，解决人生三大问题](docs/issue-300.md)
-- 第 299 期：[AI 的关键是语料](docs/issue-299.md)
-
-**四月**
-
-- 第 298 期：[轮到硬件工程师吃香了](docs/issue-298.md)
-- 第 297 期：[饮水鸟玩具](docs/issue-297.md)
-- 第 296 期：[xz 后门的作者 Jia Tan 是谁？](docs/issue-296.md)
-
-**三月**
-
-- 第 295 期：[巧妙的灯泡钟](docs/issue-295.md)
-- 第 294 期：[崖门海战的感想](docs/issue-294.md)
-- 第 293 期：[一周是一年的2%](docs/issue-293.md)
-- 第 292 期：[所有代码都是技术债](docs/issue-292.md)
-- 第 291 期：[AI 没有护城河](docs/issue-291.md)
-
-**二月**
-
-- 第 290 期：[苹果头盔的最大问题](docs/issue-290.md)
-- 第 289 期：[宽容从何而来](docs/issue-289.md)
-
-**一月**
-
-- 第 288 期：[技术写作的首要诀窍](docs/issue-288.md)
-- 第 287 期：[禄丰恐龙谷记行](docs/issue-287.md)
-- 第 286 期：[蓝色指示灯的解决方案](docs/issue-286.md)
-- 第 285 期：[为什么 PPT 不如备忘录](docs/issue-285.md)
-
-## 2023
-
-**十二月**
-
-- 第 284 期：[YouTube 有多少个视频？](docs/issue-284.md)
-- 第 283 期：[[年终感想] 没有目的地，向前走](docs/issue-283.md)
-- 第 282 期：[电动皮卡 Cybertruck 的 48V 供电](docs/issue-282.md)
-- 第 281 期：[新基建的政策选择](docs/issue-281.md)
-- 第 280 期：[机器点餐与宅文化](docs/issue-280.md)
-
-**十一月**
-
-- 第 279 期：[网络社区的悲剧](docs/issue-279.md)
-- 第 278 期：[棘手的 AI 版权](docs/issue-278.md)
-- 第 277 期：[工作台副屏的最佳选择](docs/issue-277.md)
-- 第 276 期：[内容行业的衰落](docs/issue-276.md)
-
-**十月**
-
-- 第 275 期：[彼得·蒂尔的实验](docs/issue-275.md)
-- 第 274 期：[加密通信的最后一块拼图](docs/issue-274.md)
-- 第 273 期：[任正非的三篇最新谈话](docs/issue-273.md)
-
-**九月**
-
-- 第 272 期：[Unity 的安装费，游戏业的缩影](docs/issue-272.md)
-- 第 271 期：[非线性的世界，线性的你](docs/issue-271.md)
-- 第 270 期：[“精益开发”的精益是什么？](docs/issue-270.md)
-- 第 269 期：[为什么英雄不使用炸药](docs/issue-269.md)
-
-**八月**
-
-- 第 268 期：[生产力是形容机器，不是形容人](docs/issue-268.md)
-- 第 267 期：[5G 的春天要来了](docs/issue-267.md)
-- 第 266 期：[自己做双语 EPUB 电子书](docs/issue-266.md)
-- 第 265 期：[WiFi 的后面是 LiFi](docs/issue-265.md)
-
-**七月**
-
-- 第 264 期：[Elasticsearch 的启示](docs/issue-264.md)
-- 第 263 期：[开源软件如何赚钱？](docs/issue-263.md)
-- 第 262 期：[告别密码](docs/issue-262.md)
-- 第 261 期：[黑客马拉松的正确方式](docs/issue-261.md)
-
-**六月**
-
-- 第 260 期：[你的旅程不会停在 Day 1](docs/issue-260.md)
-- 第 259 期：[如何免费使用 ChatGPT](docs/issue-259.md)
-- 第 258 期：[卡马克的猫](docs/issue-258.md)
-- 第 257 期：[黄仁勋的 Nvidia 故事](docs/issue-257.md)
-
-**五月**
-
-- 第 256 期：[最酷的乐高作品](docs/issue-256.md)
-- 第 255 期：[对待 AI 的正确态度](docs/issue-255.md)
-- 第 254 期：[人生是一个长板问题](docs/issue-254.md)
-- 第 253 期：[训练材料用完之日](docs/issue-253.md)
-
-**四月**
-
-- 第 252 期：[互联网创业变难了](docs/issue-252.md)
-- 第 251 期：[国产单板机值得推荐](docs/issue-251.md)
-- 第 250 期：[新技术的最大风险](docs/issue-250.md)
-- 第 249 期：[最成功的软件企业家](docs/issue-249.md)
-
-**三月**
-
-- 第 248 期：[不要夸大 ChatGPT](docs/issue-248.md)
-- 第 247 期：[扎克伯克的裁员信](docs/issue-247.md)
-- 第 246 期：[永不丢失的网络身份](docs/issue-246.md)
-- 第 245 期：[摩天大楼是反人类的](docs/issue-245.md)
-- 第 244 期：[大数据已死](docs/issue-244.md)
-
-**二月**
-
-- 第 243 期：[与孔子 AI 聊天](docs/issue-243.md)
-- 第 242 期：[一次尴尬的服务器被黑](docs/issue-242.md)
-- 第 241 期：[中国的增长动力在内陆](docs/issue-241.md)
-- 第 240 期：[教育年限可以缩短吗？](docs/issue-240.md)
-
-**一月**
-
-- 第 239 期：[未来两种人会增加](docs/issue-239.md)
-- 第 238 期：[停止寻找的最佳时间](docs/issue-238.md)
-
-## 2022
-
-**十二月**
-
-- 第 237 期：[真实方位是如何暴露的？](docs/issue-237.md)
-- 第 236 期：[中国的阳光地带](docs/issue-236.md)
-- 第 235 期：[青年失业率与选择创业](docs/issue-235.md)
-- 第 234 期：[AI 聊天有多强](docs/issue-234.md)
-- 第 233 期：[生活就像一个鱼缸](docs/issue-233.md)
-
-**十一月**
-
-- 第 232 期：[好用的平面设计软件](docs/issue-232.md)
-- 第 231 期：[互联网公司需要多少员工？](docs/issue-231.md)
-- 第 230 期：[电子产品的用电量](docs/issue-230.md)
-- 第 229 期：[手机充电问题的解决](docs/issue-229.md)
-
-**十月**
-
-- 第 228 期：[人类和人生的意义](docs/issue-228.md)
-- 第 227 期：[脸书的公司入职教育](docs/issue-227.md)
-- 第 226 期：[谷歌出了什么问题？](docs/issue-226.md)
-
-**九月**
-
-- 第 225 期：[游戏 NPC 也是一种职业](docs/issue-225.md)
-- 第 224 期：[Figma 为什么赢了 Sketch](docs/issue-224.md)
-- 第 223 期：[程序员需要担心裁员吗？](docs/issue-223.md)
-- 第 222 期：[四十年编程感想](docs/issue-222.md)
-- 第 221 期：[全世界最繁荣的行业](docs/issue-221.md)
-
-**八月**
-
-- 第 220 期：[人工智能的机会在哪里](docs/issue-220.md)
-- 第 219 期：[如何防止帐号被黑](docs/issue-219.md)
-- 第 218 期：[葡萄酒，樱花，全球变暖](docs/issue-218.md)
-- 第 217 期：[沙特的新未来城](docs/issue-217.md)
-
-**七月**
-
-- 第 216 期：[极简主义的胜利](docs/issue-216.md)
-- 第 215 期：[互联网最喜欢的行为模式](docs/issue-215.md)
-- 第 214 期：[你的地图是错的](docs/issue-214.md)
-- 第 213 期：[知识孤岛，知识软件](docs/issue-213.md)
-- 第 212 期：[人生不短](docs/issue-212.md)
-
-**六月**
-
-- 第 211 期：[虚拟商品可以拉动 GDP](docs/issue-211.md)
-- 第 210 期：[为什么软件变得复杂](docs/issue-210.md)
-- 第 209 期：[程序员是怎样的人](docs/issue-209.md)
-
-**五月**
-
-- 第 208 期：[晋升制度的问题](docs/issue-208.md)
-- 第 207 期：[汽车行业的顶峰可能过去了](docs/issue-207.md)
-- 第 206 期：[如何走出失望和怀疑](docs/issue-206.md)
-- 第 205 期：[互联网风口过去了吗？](docs/issue-205.md)
-
-**四月**
-
-- 第 204 期：[如何度过疫情、裁员、还有战争](docs/issue-204.md)
-- 第 203 期：[英国的名校签证，伯克利的计算机教育](docs/issue-203.md)
-- 第 202 期：[三个有启发的学习方法](docs/issue-202.md)
-- 第 201 期：[中国需要成立半导体部](docs/issue-201.md)
-
-**三月**
-
-- 第 200 期：[低期望，多尝试](docs/issue-200.md)
-- 第 199 期：[俄罗斯的 HTTPS 证书问题](docs/issue-199.md)
-- 第 198 期：[美国制造是否可能](docs/issue-198.md)
-- 第 197 期：[如果这个世界有快乐机](docs/issue-197.md)
-
-**二月**
-
-- 第 196 期：[掌机的未来](docs/issue-196.md)
-- 第 195 期：[你做过不在乎结果的项目吗？](docs/issue-195.md)
-- 第 194 期：[悲观者正确，乐观者成功](docs/issue-194.md)
-
-**一月**
-
-- 第 193 期：[前端与后端，谁更难？](docs/issue-193.md)
-- 第 192 期：[最大的机会来自新技术](docs/issue-192.md)
-- 第 191 期：[一个程序员的财务独立之路](docs/issue-191.md)
-
-## 2021
-
-**十二月**
-
-- 第 190 期：[产品化思维](docs/issue-190.md)
-- 第 189 期：[下一个内卷的行业](docs/issue-189.md)
-- 第 188 期：[音乐是反社交](docs/issue-188.md)
-- 第 187 期：[元宇宙会成功吗](docs/issue-187.md)
-- 第 186 期：[低纬度，高海拔，气候优势](docs/issue-186.md)
-
-**十一月**
-
-- 第 185 期：[美国宪法拍卖，一个区块链案例](docs/issue-185.md)
-- 第 184 期：[政府的存储需求有多大？](docs/issue-184.md)
-- 第 183 期：[腾讯的员工退休福利](docs/issue-183.md)
-- 第 182 期：[新人优惠的风险](docs/issue-182.md)
-
-**十月**
-
-- 第 181 期：[移动支付应该怎么设计？](docs/issue-181.md)
-- 第 180 期：[你想住在中国哪里？](docs/issue-180.md)
-- 第 179 期：[AR 技术的打开方式](docs/issue-179.md)
-- 第 178 期：[家庭太阳能发电的春天](docs/issue-178.md)
-
-**九月**
-
-- 第 177 期：[iPad 的真正用途](docs/issue-177.md)
-- 第 176 期：[中国法院承认 GPL 吗？](docs/issue-176.md)
-- 第 175 期：[知识广度 vs 知识深度](docs/issue-175.md)
-- 第 174 期：[全能程序员 vs 特长程序员](docs/issue-174.md)
-
-**八月**
-
-- 第 173 期：[网络收音机的设计](docs/issue-173.md)
-- 第 172 期：[我们会死于气候灾难吗？](docs/issue-172.md)
-- 第 171 期：[云服务流量有多贵？](docs/issue-171.md)
-- 第 170 期：[软件订阅制的胜利](docs/issue-170.md)
-
-**七月**
-
-- 第 169 期：[五菱汽车的产品设计](docs/issue-169.md)
-- 第 168 期：[游戏《底特律：变人》](docs/issue-168.md)
-- 第 167 期：[广告拦截器太过分了](docs/issue-167.md)
-- 第 166 期：[视频学习胜过读书吗？](docs/issue-166.md)
-- 第 165 期：[全端 App 的时代](docs/issue-165.md)
-
-**六月**
-
-- 第 164 期：[培训班 vs 大学，求职成功率比较](docs/issue-164.md)
-- 第 163 期：[你的城市有多少张病床？](docs/issue-163.md)
-- 第 162 期：[生活就像《吃豆人》游戏](docs/issue-162.md)
-- 第 161 期：[再见了，学术硕士](docs/issue-161.md)
-
-**五月**
-
-- 第 160 期：[中年码农的危机](docs/issue-160.md)
-- 第 159 期：[游戏开发者的年薪](docs/issue-159.md)
-- 第 158 期：[内容渠道的贬值](docs/issue-158.md)
-- 第 157 期：[KK 给年轻人的建议](docs/issue-157.md)
-
-**四月**
-
-- 第 156 期：[显卡缺货与异业竞争](docs/issue-156.md)
-- 第 155 期：[数字货币是打破美元霸权的武器吗？](docs/issue-155.md)
-- 第 154 期：[1982年的信息社会预言](docs/issue-154.md)
-- 第 153 期：[机器翻译是对译者的侮辱吗？](docs/issue-153.md)
-- 第 152 期：[从北大到技校](docs/issue-152.md)
-
-**三月**
-
-- 第 151 期：[NFT 是什么，听说能赚钱](docs/issue-151.md)
-- 第 150 期：[当音乐还是稀缺的时候](docs/issue-150.md)
-- 第 149 期：[新能源汽车，谁会是赢家？](docs/issue-149.md)
-- 第 148 期：[微增长时代](docs/issue-148.md)
-
-**二月**
-
-- 第 147 期：[寻找你愿意忍受的痛苦](docs/issue-147.md)
-- 第 146 期：[网课应该怎么上？](docs/issue-146.md)
-- 第 145 期：[大家不出门，经济怎么办？](docs/issue-145.md)
-
-**一月**
-
-- 第 144 期：[提高收入的根本途径](docs/issue-144.md)
-- 第 143 期：[世界尽头与冷酷仙境](docs/issue-143.md)
-- 第 142 期：[2020年才是21世纪元年](docs/issue-142.md)
-- 第 141 期：[封闭系统的胜利](docs/issue-141.md)
-
-## 2020
-
-**十二月**
-
-- 第 140 期：[印度人的工资是多少？](docs/issue-140.md)
-- 第 139 期：[生物学的可怕进展](docs/issue-139.md)
-- 第 138 期：[失业难以避免，重构人生规划](docs/issue-138.md)
-- 第 137 期：[Slack 被收购，以及企业的技术选型](docs/issue-137.md)
-- 第 136 期：[利特伍德奇迹定律](docs/issue-136.md)
-
-**十一月**
-
-- 第 135 期：[什么行业适合创业？](docs/issue-135.md)
-- 第 134 期：[未来的游戏业比现在大100倍](docs/issue-134.md)
-- 第 133 期：[贵州变瑞士，有没有可能？](docs/issue-133.md)
-- 第 132 期：[快能力和慢能力](docs/issue-132.md)
-
-**十月**
-
-- 第 131 期：[你的头脑是二值逻辑，还是三值逻辑？](docs/issue-131.md)
-- 第 130 期：[低龄化的互联网](docs/issue-130.md)
-- 第 129 期：[创业的凸函数与凹函数](docs/issue-129.md)
-- 第 128 期：[这个社会是否正在变成“赛博朋克”？](docs/issue-128.md)
-
-**九月**
-
-- 第 127 期：[未来人人开发软件，几乎没人编码](docs/issue-127.md)
-- 第 126 期：[内卷化是什么？](docs/issue-126.md)
-- 第 125 期：[数字人民币要取代谁](docs/issue-125.md)
-- 第 124 期：[华为如何考核员工](docs/issue-124.md)
-- 第 123 期：[互联网公司与湘军的军制](docs/issue-123.md)
-
-**八月**
-
-- 第 122 期：[谈谈互联网公司的高估值](docs/issue-122.md)
-- 第 121 期：[为什么人类没有越来越闲？](docs/issue-121.md)
-- 第 120 期：[只有开放才能打败封锁](docs/issue-120.md)
-- 第 119 期：[降雨量和保险博弈](docs/issue-119.md)
-
-**七月**
-
-- 第 118 期：[高考志愿怎么填](docs/issue-118.md)
-- 第 117 期：[我不想让你记住我的脸](docs/issue-117.md)
-- 第 116 期：[世界的未来就是一个火药桶](docs/issue-116.md)
-- 第 115 期：[保护你的 DNA，不要泄漏](docs/issue-115.md)
-- 第 114 期：[U 盘化生存和 Uber-job](docs/issue-114.md)
-
-**六月**
-
-- 第 113 期：[暴力犯罪为什么越来越少？](docs/issue-113.md)
-- 第 112 期：[如何培养领导力](docs/issue-112.md)
-- 第 111 期：[智能电视的误区](docs/issue-111.md)
-- 第 110 期：[如果不能去美国上市](docs/issue-110.md)
-
-**五月**
-
-- 第 109 期：[播客的价值](docs/issue-109.md)
-- 第 108 期：[阵地战与奇袭战](docs/issue-108.md)
-- 第 107 期：[致富与杠杆](docs/issue-107.md)
-- 第 106 期：[数字游民](docs/issue-106.md)
-
-**四月**
-
-- 第 105 期：[线上行业会赢](docs/issue-105.md)
-- 第 104 期：[语音合成的用途](docs/issue-104.md)
-- 第 103 期：[信息的半衰期](docs/issue-103.md)
-- 第 102 期：[工作热情从何而来？](docs/issue-102.md)
-- 第 101 期：[互联网不再稀缺](docs/issue-101.md)
-
-**三月**
-
-- 第 100 期：[零利率时代](docs/issue-100.md)
-- 第 99 期：[疫情导致的研究生扩招](docs/issue-99.md)
-- 第 98 期：[怎样清晰地表达自己的观点？](docs/issue-98.md)
-- 第 97 期：[那些为了考试拼搏的年轻人](docs/issue-97.md)
-
-**二月**
-
-- 第 96 期：[在线教育不等于录制视频](docs/issue-96.md)
-- 第 95 期：[远程办公暴露冗余岗位](docs/issue-95.md)
-- 第 94 期：[既懂得制造，又懂得销售](docs/issue-94.md)
-- 第 93 期：[漫游类的游戏，将会越来越多](docs/issue-93.md)
-
-**一月**
-
-- 第 92 期：[听觉暂留](docs/issue-92.md)
-- 第 91 期：[印度孟买的房价，为什么跟北京一样高？](docs/issue-91.md)
-- 第 90 期：[管人和技术是两种不同的能力](docs/issue-90.md)
-- 第 89 期：[不下雨的地方，不要去卖伞](docs/issue-89.md)
-
-## 2019
-
-**十二月**
-
-- 第 88 期：[如果你遇到一条蛇](docs/issue-88.md)
-- 第 87 期：[新人要为团队写文档](docs/issue-87.md)
-- 第 86 期：[千万不要当完美主义者](docs/issue-86.md)
-- 第 85 期：[美国为什么不是乱哄哄？](docs/issue-85.md)
-
-**十一月**
-
-- 第 84 期：[一次性工作招聘，用完你就丢](docs/issue-84.md)
-- 第 83 期：[技术解决不了人类的对立](docs/issue-83.md)
-- 第 82 期：[就业要选发展最快的行业](docs/issue-82.md)
-- 第 81 期：[子辈能大幅超越父辈吗？](docs/issue-81.md)
-- 第 80 期：[企业软件创业，为什么在中国不容易成功？](docs/issue-80.md)
-
-**十月**
-
-- 第 79 期：[我们的生活越来越依赖机器](docs/issue-79.md)
-- 第 78 期：[下一个风口是什么行业？](docs/issue-78.md)
-- 第 77 期：[韩剧《阿尔布拉罕宫的回忆》](docs/issue-77.md)
-- 第 76 期：[任何爱好都能变成职业，只要你会拍视频](docs/issue-76.md)
-
-**九月**
-
-- 第 75 期：[电子取代机械，对就业有何影响？](docs/issue-75.md)
-- 第 74 期：[信息的商业模式为什么不是收费](docs/issue-74.md)
-- 第 73 期：[数据统计的威力](docs/issue-73.md)
-- 第 72 期：[当代人不再有手稿](docs/issue-72.md)
-
-**八月**
-
-- 第 71 期：[名校毕业，不容易创业](docs/issue-71.md)
-- 第 70 期：[世界进入负利率时代，这意味什么](docs/issue-70.md)
-- 第 69 期：[做得好 vs 做得快](docs/issue-69.md)
-- 第 68 期：[关注能力的成长，胜于关注待遇](docs/issue-68.md)
-- 第 67 期：[复杂系统无法维护，侏罗纪公园必定失败](docs/issue-67.md)
-
-**七月**
-
-- 第 66 期：[创业不是零和游戏](docs/issue-66.md)
-- 第 65 期：[周刊开设“谁在招人”的招聘服务](docs/issue-65.md)
-- 第 64 期：[新人如何进入互联网行业？](docs/issue-64.md)
-- 第 63 期：[互联网市场的集中化趋势](docs/issue-63.md)
-
-**六月**
-
-- 第 62 期：[日本电影《编舟记》](docs/issue-62.md)
-- 第 61 期：[转行前端越来越难](docs/issue-61.md)
-- 第 60 期：[一本介绍人类起源的学术自传](docs/issue-60.md)
-- 第 59 期：[互联网时代很难交朋友](docs/issue-59.md)
-
-**五月**
-
-- 第 58 期：[软件推广可以像化妆品那样吗？](docs/issue-58.md)
-- 第 57 期：[分享知识是否违反人性？](docs/issue-57.md)
-- 第 56 期：[文科生为什么不容易就业？](docs/issue-56.md)
-- 第 55 期：[不是反对 996，而要提倡远程办公](docs/issue-55.md)
-- 第 54 期：[可扩展性最好的活动](docs/issue-54.md)
-
-**四月**
-
-- 第 53 期：[DNA 相亲会](docs/issue-53.md)
-- 第 52 期：[人脸识别与课堂监控](docs/issue-52.md)
-- 第 51 期：[为什么过去10年，笔记本硬件发展缓慢？](docs/issue-51.md)
-- 第 50 期：["时间换收入"是一个陷阱](docs/issue-50.md)
-
-**三月**
-
-- 第 49 期：[学会有所不为](docs/issue-49.md)
-- 第 48 期：[著名程序员 Bill Joy 的人生启示](docs/issue-48.md)
-- 第 47 期：[吃播算不算正式工作？](docs/issue-47.md)
-- 第 46 期：[推荐算法的副作用](docs/issue-46.md)
-- 第 45 期：[阿西莫夫回忆录《人生舞台》](docs/issue-45.md)
-
-**二月**
-
-- 第 44 期：[高校“唯论文”导向的后果](docs/issue-44.md)
-- 第 43 期：[一篇好玩的论文](docs/issue-43.md)
-- 第 42 期：[什么领域，你可以做到出类拔萃？](docs/issue-42.md)
-
-**一月**
-
-- 第 41 期：[如何看待互联网公司裁员？](docs/issue-41.md)
-- 第 40 期：[手动咖啡不属于电子时代](docs/issue-40.md)
-- 第 39 期：[苹果公司的两封公开信](docs/issue-39.md)
-- 第 38 期：[使用越方便，技术实现越复杂](docs/issue-38.md)
-
-## 2018
-
-**十二月**
-
-- 第 37 期：[小说家的时代，永远地过去了](docs/issue-37.md)
-- 第 36 期：[程序员将来会不会过剩？](docs/issue-36.md)
-- 第 35 期：[“一人份”的服务越来越多](docs/issue-35.md)
-- 第 34 期：[身份证的最终解决方案：人体植入芯片](docs/issue-34.md)
-
-**十一月**
-
-- 第 33 期：[现场投票不如网络投票](docs/issue-33.md)
-- 第 32 期：[砌砖头的三种角度](docs/issue-32.md)
-- 第 31 期：[程序员的退休信号](docs/issue-31.md)
-- 第 30 期：[为什么谷歌做不好社交软件？](docs/issue-30.md)
-- 第 29 期：[公司的组织架构，决定了软件的复杂性](docs/issue-29.md)
-
-**十月**
-
-- 第 28 期：[软件开发是真正的知识吗？](docs/issue-28.md)
-- 第 27 期：[乔布斯的“热情假设”对不对？](docs/issue-27.md)
-- 第 26 期：[DHH 的新书《工作何必疯狂》](docs/issue-26.md)
-- 第 25 期：[安卓手机十周年的感想](docs/issue-25.md)
-
-**九月**
-
-- 第 24 期：[新人进入软件行业的建议](docs/issue-24.md)
-- 第 23 期：[统计学上的人生最大决定因素](docs/issue-23.md)
-- 第 22 期：[猴子自拍，版权归谁](docs/issue-22.md)
-- 第 21 期：[人生的水平运动和垂直运动](docs/issue-21.md)
-
-**八月**
-
-- 第 20 期：[不读大学的替代方案](docs/issue-20.md)
-- 第 19 期：[电影《头号玩家》描绘未来的虚拟世界](docs/issue-19.md)
-- 第 18 期：[无人机攻击，难以防范](docs/issue-18.md)
-- 第 17 期：[全球变暖，在劫难逃](docs/issue-17.md)
-- 第 16 期：[科技改变死亡的模式](docs/issue-16.md)
-
-**七月**
-
-- 第 15 期：[周刊的内容从何而来？](docs/issue-15.md)
-- 第 14 期：[马斯克的人生才是梦想家的人生](docs/issue-14.md)
-- 第 13 期：[周刊为什么只谈技术？](docs/issue-13.md)
-- 第 12 期：[人口老龄化，养老金不够](docs/issue-12.md)
-
-**六月**
-
-- 第 11 期：[编程语言越发复杂](docs/issue-11.md)
-- 第 10 期：[30岁以后谨慎转行前端](docs/issue-10.md)
-- 第 9 期：[身份证可以植入人体](docs/issue-9.md)
-- 第 8 期：[实验室会生产人吗？](docs/issue-8.md)
-- 第 7 期：[垃圾填埋不是解决办法](docs/issue-7.md)
-
-**五月**
-
-- 第 6 期：[未来还需要苦学外语吗？](docs/issue-6.md)
-- 第 5 期：[互联网时代，做一个好人是划算的](docs/issue-5.md)
-- 第 4 期：[马克思研究的问题](docs/issue-4.md)
-- 第 3 期：[周刊的风格](docs/issue-3.md)
-
-**四月**
-
-- 第 2 期：[为什么写周刊？](docs/issue-2.md)
-- 第 1 期：[创刊号](docs/issue-1.md)
+周刊原文版权归 [阮一峰](https://github.com/ruanyf) 所有，遵循原仓库 [MIT License](https://github.com/ruanyf/weekly/blob/master/LICENSE)。  
+工具清单为基于公开内容的整理提取，仅供学习与交流使用。
