@@ -411,7 +411,8 @@
     "issue-409.md",
     "issue-410.md",
     "issue-411.md",
-    "issue-412.md"
+    "issue-412.md",
+    "issue-413.md"
   ],
   "known_urls": [
     "http://airbnb.io/lottie",
@@ -763,6 +764,7 @@
     "https://crontask.io",
     "https://cryptboard.io",
     "https://crypto-online.cn/playground/hash",
+    "https://cryptpad.fr",
     "https://css.winterveil.net",
     "https://cssanimotion.pages.dev",
     "https://ctfever.uniiem.com",
@@ -1132,6 +1134,7 @@
     "https://github.com/EthanYoQ/Invoice-Downloader",
     "https://github.com/EtherDream/http-server-online",
     "https://github.com/Eugeny/terminus",
+    "https://github.com/EvanZhouDev/polycompiler",
     "https://github.com/ExploringTheCodeWorld/relationship-ts",
     "https://github.com/Explosion-Scratch/to-userscript",
     "https://github.com/FatDoge/wtree",
@@ -1467,6 +1470,7 @@
     "https://github.com/Yikun/hub-mirror-action",
     "https://github.com/YougLin-dev/electron-async-storage",
     "https://github.com/Yqnn/svg-path-editor",
+    "https://github.com/Yudaotor/lyrimuse",
     "https://github.com/Yuri-NagaSaki/CattoPic",
     "https://github.com/Yuri-NagaSaki/FontInAss",
     "https://github.com/Yuyz0112/vx.dev",
@@ -1746,6 +1750,7 @@
     "https://github.com/codenamecpp/carnage3d",
     "https://github.com/coder-hxl/x-crawl",
     "https://github.com/coder/code-server",
+    "https://github.com/coder/ghostty-web",
     "https://github.com/coder/httpjail",
     "https://github.com/codercom/code-server",
     "https://github.com/codesardine/Jadesktop",
@@ -2360,6 +2365,7 @@
     "https://github.com/lin-snow/Ech0",
     "https://github.com/lin-stephanie/astro-antfustyle-theme",
     "https://github.com/lindeer/dartbook",
+    "https://github.com/lingyired/status-trio",
     "https://github.com/linhaojun857/aurora",
     "https://github.com/linjc/mini-stores",
     "https://github.com/linjc/smooth-signature",
@@ -2435,6 +2441,7 @@
     "https://github.com/magic-FE/translate-man",
     "https://github.com/magic-wormhole/magic-wormhole",
     "https://github.com/mail-in-a-box/mailinabox",
+    "https://github.com/mailez-hq/mailez",
     "https://github.com/makeplane/plane",
     "https://github.com/mangatmodi/RandomJson",
     "https://github.com/manticoresoftware/manticoresearch",
@@ -2680,6 +2687,7 @@
     "https://github.com/petercat-ai/petercat",
     "https://github.com/pfalstad/circuitjs1",
     "https://github.com/pfcao/abookmark",
+    "https://github.com/philocalyst/infat",
     "https://github.com/photoview/photoview",
     "https://github.com/php-lisp/php-lisp",
     "https://github.com/pi-hole/pi-hole",
@@ -2712,6 +2720,7 @@
     "https://github.com/popey/sosumi-snap",
     "https://github.com/porsager/postgres",
     "https://github.com/portabletext/portabletext",
+    "https://github.com/posit-dev/great-tables",
     "https://github.com/postalserver/postal",
     "https://github.com/postalsys/pending-dns",
     "https://github.com/ppz-pro/chrome-filter",
@@ -2771,6 +2780,7 @@
     "https://github.com/regomne/magic-snake",
     "https://github.com/rehacktive/caffeine",
     "https://github.com/reidjs/markdown-tweet-scheduler",
+    "https://github.com/renezander030/capcut-cli",
     "https://github.com/renzhezhilu/webp2jpg-online",
     "https://github.com/repo-analytics/repo-analytics.github.io",
     "https://github.com/responsively-org/responsively-app",
@@ -3227,6 +3237,7 @@
     "https://github.com/xcanwin/KeepChatGPT",
     "https://github.com/xcodebuild/CodeTerminal",
     "https://github.com/xcv58/Tab-Manager-v2",
+    "https://github.com/xdadda/mini-photo-editor",
     "https://github.com/xiadd/pastebin-worker",
     "https://github.com/xiangechen/chili3d",
     "https://github.com/xiao-zaiyi/illa-helper",
@@ -4476,5 +4487,5 @@
     "https://zz-plan.com",
     "pptrconsole.com"
   ],
-  "last_run": "2026-09-15T09:30:14.273587+00:00"
+  "last_run": "2026-09-18T02:35:26.062135+00:00"
 }

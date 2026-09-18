@@ -888,3 +888,82 @@
 - 描述: 一个测试邮件发送功能的应用程序，嵌入你的应用，用它测试应用的邮件发送功能，自带 Web 后台。
 
 ---
+### [第 413 期] Great Tables
+
+- 来源: docs/issue-413.md
+- 链接: https://github.com/posit-dev/great-tables
+- 描述: 一个可以生成复杂表格的 Python 库。
+
+---
+
+### [第 413 期] ghostty-web
+
+- 来源: docs/issue-413.md
+- 链接: https://github.com/coder/ghostty-web
+- 描述: 这个项目将终端模拟器 [Ghostty](https://ghostty.org/) 编译成 WASM 代码，从而可以在网页里面使用一个全功能的终端。
+
+---
+
+### [第 413 期] Infat
+
+- 来源: docs/issue-413.md
+- 链接: https://github.com/philocalyst/infat
+- 描述: 一个命令行工具，在 Mac 电脑上设置不同后缀名文件的默认打开方法。
+
+---
+
+### [第 413 期] mini-img-editor
+
+- 来源: docs/issue-413.md
+- 链接: https://github.com/xdadda/mini-photo-editor
+- 描述: 一个使用 WebGL 的在线图片编辑器，作为原型演示，界面非常简洁。
+
+---
+
+### [第 413 期] CryptPad
+
+- 来源: docs/issue-413.md
+- 链接: https://cryptpad.fr/
+- 描述: 免费使用的线上 Office 办公套件，支持端对端加密，参见[介绍文章](https://www.xda-developers.com/reasons-why-use-cryptpad-instead-google-docs/)。
+
+---
+
+### [第 413 期] Lyrimuse
+
+- 来源: docs/issue-413.md
+- 链接: https://github.com/Yudaotor/lyrimuse
+- 描述: macOS 桌面歌词工具，实时查找显示正在播放的歌曲的歌词。（[@Yudaotor](https://github.com/ruanyf/weekly/issues/11551) 投稿）
+
+---
+
+### [第 413 期] capcut-cli
+
+- 来源: docs/issue-413.md
+- 链接: https://github.com/renezander030/capcut-cli
+- 描述: 剪映（capcut）的非官方命令行工具，在终端里面创建/编辑视频。（[@renezander030](https://github.com/ruanyf/weekly/issues/11634) 投稿）
+
+---
+
+### [第 413 期] mailez
+
+- 来源: docs/issue-413.md
+- 链接: https://github.com/mailez-hq/mailez
+- 描述: 一个 Go 语言的二进制文件，实现自托管邮件系统，网页收发邮件，支持 SMTP / IMAP / POP3 / ManageSieve 四个协议。（[@lianguan](https://github.com/ruanyf/weekly/issues/11680) 投稿）
+
+---
+
+### [第 413 期] Status Trio
+
+- 来源: docs/issue-413.md
+- 链接: https://github.com/lingyired/status-trio
+- 描述: 一款借鉴 iPhone Duo 设计的三合一 Mac 状态栏图标，集成 Wi‑Fi 、电池与音量。（[@lingyired](https://github.com/ruanyf/weekly/issues/11670) 投稿）
+
+---
+
+### [第 413 期] Polycompiler
+
+- 来源: docs/issue-413.md
+- 链接: https://github.com/EvanZhouDev/polycompiler
+- 描述: 一个有意思的项目，可以把 JS 脚本和 Python 脚本打包成一个脚本，同时能在 JS 环境和 Python 环境运行。
+
+---
