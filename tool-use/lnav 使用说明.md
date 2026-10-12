@@ -1,7 +1,8 @@
 # lnav 使用说明
 
 [lnav](https://lnav.org/)（The Logfile Navigator）是基于终端的**日志文件查看器**，支持自动识别日志格式、多文件按时间合并、搜索过滤、错误快速跳转，以及 SQL 统计分析。  
-周刊第 409 期推荐：[issue-409.md](docs/issue-409.md)
+周刊第 409 期推荐：[issue-409.md](https://github.com/duanguo108/weekly/blob/master/docs/issue-409.md)
+[工具列表清单](https://github.com/duanguo108/weekly/blob/master/tool-extractor/output/tools-list-401-450.md)
 
 ---
 
