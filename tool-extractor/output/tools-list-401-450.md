@@ -1110,3 +1110,217 @@
 - 描述: 让 Claude Code 的权限请求从 Mac 刘海里弹出，方便让其在后台工作。（[@munvard](https://github.com/ruanyf/weekly/issues/12024) 投稿）
 
 ---
+### [第 415 期] REA
+
+- 来源: docs/issue-415.md
+- 链接: https://github.com/morluto/rea
+- 描述: 最近世界级的热点项目，GitHub 近20万颗星，使用 AI 进行逆向工程，根据原始应用的二进制文件，重新实现出一个 AI 重写的版本。 由于 AI 现在可以从二进制文件逆向工程复刻出原始软件，网友[评论](https://news.ycombinator.com/item?id=50062172)：“这将导致所有软件都运行在开发者的计算机上（云服务），而不再运行在用户的计算机上。”
+
+---
+
+### [第 415 期] SynthID 检测器
+
+- 来源: docs/issue-415.md
+- 链接: https://synthid.com/
+- 描述: 谷歌官方推出的 AI 识别工具。只要上传文件，它会识别是否包含 SynthID。如果有，该文件就是 AI 生成。
+
+---
+
+### [第 415 期] ts-rust
+
+- 来源: docs/issue-415.md
+- 链接: https://github.com/pingdotgg/ts-rust
+- 描述: 网友使用 AI 实现的 Rust 语言写的 TypeScript 编译器，据说100%兼容官方编译器。
+
+---
+
+### [第 415 期] Doory
+
+- 来源: docs/issue-415.md
+- 链接: https://github.com/shaongitbd/doory
+- 描述: 浏览器里的平面设计工具，目标是成为开源的 Canva 替代品。目前，内置的模板较少，只有10个。
+
+---
+
+### [第 415 期] HeadOrbit
+
+- 来源: docs/issue-415.md
+- 链接: https://github.com/Cogria-AI/HeadOrbit
+- 描述: 通过 AirPods 内置的运动传感器，让耳机感应头部和颈部动作，从而实现点头、摇头、颈部移动来操作 Mac 电脑，不需要用到摄像头。（[@cogria](https://github.com/ruanyf/weekly/issues/12097) 投稿）
+
+---
+
+### [第 415 期] qrypt
+
+- 来源: docs/issue-415.md
+- 链接: https://github.com/yinzhenyu-su/qrypt
+- 描述: 将网盘挂载成本地文件夹，跨平台的命令行工具，支持挂载国内主要网盘。（[@yinzhenyu-su](https://github.com/ruanyf/weekly/issues/12100) 投稿）
+
+---
+
+### [第 415 期] EdgeSSH
+
+- 来源: docs/issue-415.md
+- 链接: https://github.com/aozorae/EdgeSSH
+- 描述: 基于 Cloudflare 的 VPS 虚拟主机管理平台，支持在网页上 SSH 登录管理你的各种 VPS 主机。（[@aozorae](https://github.com/ruanyf/weekly/issues/12099) 投稿）
+
+---
+
+### [第 415 期] charts-rs
+
+- 来源: docs/issue-415.md
+- 链接: https://github.com/vicanso/charts-rs
+- 描述: 用 Rust 编写的图表库，不依赖浏览器和 Node.js，直接得到 SVG 和图片文件，图表语法借鉴 ECharts。（[@vicanso](https://github.com/ruanyf/weekly/issues/12123) 投稿）
+
+---
+
+### [第 415 期] ItsPaint
+
+- 来源: docs/issue-415.md
+- 链接: https://github.com/joshlin2201/itspaint
+- 描述: macOS 的开源画板程序，适合给截图做标注。（[@joshlin2201](https://github.com/ruanyf/weekly/issues/12130) 投稿）
+
+---
+
+### [第 415 期] Caplo
+
+- 来源: docs/issue-415.md
+- 链接: https://github.com/icloudza/caplo
+- 描述: 开源的 macOS 录屏工具，录屏时遇到点击，会自动放大镜头，画面跟着鼠标移动。（[@icloudza](https://github.com/ruanyf/weekly/issues/12129) 投稿）
+
+---
+
+### [第 415 期] bg2x
+
+- 来源: docs/issue-415.md
+- 链接: https://github.com/isixe/bg2x
+- 描述: 一款开源的、可选择使用不同 AI 模型的图像超分辨率（放大）工具，最高可将图片放大4倍。所有处理均在浏览器本地完成。（[@isixe](https://github.com/ruanyf/weekly/issues/12157) 投稿）
+
+---
+
+### [第 415 期] EnvTrace
+
+- 来源: docs/issue-415.md
+- 链接: https://envtrace.net/
+- 描述: 这个网站可以检查你的浏览器指纹，泄漏了多少个人信息，给出有问题的地方。（[@88864shsa](https://github.com/ruanyf/weekly/issues/12141) 投稿）
+
+---
+
+### [第 415 期] Droidline
+
+- 来源: docs/issue-415.md
+- 链接: https://github.com/KnifeLemon/Droidline
+- 描述: 一个开源的安卓 App，手机安装后，扫码与电脑配对，电脑就可以编写脚本用来操作手机。手机端不用开 USB 调试，也不用 root。（[@KnifeLemon](https://github.com/ruanyf/weekly/issues/12194) 投稿）
+
+---
+
+### [第 415 期] ESP32 iPhone Agent
+
+- 来源: docs/issue-415.md
+- 链接: https://github.com/onehumanbeing/esp32-iphone-agent
+- 描述: 使用一块约 7 美元的 ESP32-S3 开发板，插入 iPhone 的 USB 接口，让 AI 模型操作手机，实现手机自动化，不需要 Mac、不需要开发者账号、不需要越狱。（[@onehumanbeing](https://github.com/ruanyf/weekly/issues/12340) 投稿）
+
+---
+
+### [第 415 期] Bulchimbeon
+
+- 来源: docs/issue-415.md
+- 链接: https://github.com/s3onghyun/bulchimbeon
+- 描述: 一个 macOS 开源软件，在 Claude Code、Codex 等 AI 编程代理工作时阻止 Mac 休眠，支持合盖保持唤醒、过热暂停、低电量退出。（[@s3onghyun](https://github.com/ruanyf/weekly/issues/12364) 投稿）
+
+---
+### [第 416 期] sslx
+
+- 来源: docs/issue-416.md
+- 链接: https://github.com/glincker/sslx
+- 描述: 一个检测、查看 HTTPS 证书信息的命令行工具。
+
+---
+
+### [第 416 期] Mac.apk
+
+- 来源: docs/issue-416.md
+- 链接: https://github.com/kksimp/Mac.apk
+- 描述: 这个应用可以让 Mac 运行安卓软件，不是虚拟机，也不是模拟器，原理是模拟安卓的系统 API。
+
+---
+
+### [第 416 期] siltop
+
+- 来源: docs/issue-416.md
+- 链接: https://github.com/CLoaKY233/siltop
+- 描述: 一个 macOS 命令行工具，在终端显示各种实时的系统信息：CPU、GPU、内存、电力、温度、存储、网络等。
+
+---
+
+### [第 416 期] Little Snitch Mini
+
+- 来源: docs/issue-416.md
+- 链接: https://obdev.at/products/littlesnitch-mini/index.html
+- 描述: 一个 macOS 软件，显示正在运行的所有应用的互联网连接，并可以阻断指定的单个连接。
+
+---
+
+### [第 416 期] Pines
+
+- 来源: docs/issue-416.md
+- 链接: https://github.com/thedevdojo/pines
+- 描述: 一个基于 Tailwind 的 UI 组件库。
+
+---
+
+### [第 416 期] silkpulse
+
+- 来源: docs/issue-416.md
+- 链接: https://github.com/2234839/silkpulse
+- 描述: 前端的远程页面调试工具。在页面插入一个脚本，就可以远程打开该网页的控制台，查看各种信息，接收实时报错，适合调试手机端页面。（[@2234839](https://github.com/ruanyf/weekly/issues/12383) 投稿）
+
+---
+
+### [第 416 期] TaskbarLyrics
+
+- 来源: docs/issue-416.md
+- 链接: https://github.com/ANYNC/TaskbarLyrics
+- 描述: Windows 任务栏实时显示歌词，支持国内主要音乐服务。（[@ANYNC](https://github.com/ruanyf/weekly/issues/12408) 投稿）
+
+---
+
+### [第 416 期] Archify
+
+- 来源: docs/issue-416.md
+- 链接: https://github.com/tt-a1i/archify
+- 描述: 一个 Skill 项目，将一段话、一个计划、一个代码仓库变成互动式网页流程图。（[@zhengxin-wang](https://github.com/ruanyf/weekly/issues/12423) 投稿）
+
+---
+
+### [第 416 期] html-to-video
+
+- 来源: docs/issue-416.md
+- 链接: https://github.com/wx4766/html-to-video
+- 描述: 一个把 HTML 网页动画逐帧渲染成 MP4 视频的命令行工具。（[@wx4766](https://github.com/ruanyf/weekly/issues/12486) 投稿）
+
+---
+
+### [第 416 期] Parcel
+
+- 来源: docs/issue-416.md
+- 链接: https://github.com/hyphy-void/Parcel
+- 描述: 基于 Cloudflare Worker 环境的临时文件分享应用，上传文件后生成加密的分享链接，到期自动清理。（[@hyphy-void](https://github.com/ruanyf/weekly/issues/12598) 投稿）
+
+---
+
+### [第 416 期] douban-cli
+
+- 来源: docs/issue-416.md
+- 链接: https://github.com/Marvae/douban-cli
+- 描述: 豆瓣的非官方命令行客户端，可以用来获取电影、剧集、图书的数据。（[@Marvae](https://github.com/ruanyf/weekly/issues/12616) 投稿）
+
+---
+
+### [第 416 期] wol
+
+- 来源: docs/issue-416.md
+- 链接: https://github.com/Trugamr/wol
+- 描述: 一个命令行工具，可以通过命令行或 Web 界面，唤醒当前局域网里面某台正在休眠的计算机。
+
+---
